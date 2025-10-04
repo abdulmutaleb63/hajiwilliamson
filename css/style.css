@@ -162,7 +162,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../images/haji.jpg') 50% 35% / cover no-repeat fixed;
+  background: url('../images/haji.jpg') 50% 20% / cover no-repeat fixed;
   background-attachment: scroll;
   color: var(--ink);
   text-align: center;
