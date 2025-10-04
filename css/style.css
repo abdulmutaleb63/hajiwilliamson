@@ -155,7 +155,7 @@ img {
   align-items: center;
   justify-content: center;
   background: url('../images/haji.jpg') center/contain no-repeat fixed;
-  background color: #000;
+  background-color: #000;
   color: #fff;
   text-align: center;
 }
