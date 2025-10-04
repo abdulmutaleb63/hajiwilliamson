@@ -47,7 +47,7 @@ img {
   top:0;
   z-index:99;
   background:#000;
-  border-bottom:1px solid var(--gold-dark);
+  border-bottom:1px solid var(--ink);
 }
 .navbar .inner {
   display:flex;
@@ -212,7 +212,7 @@ img {
   margin: 100px auto;
   padding-left: 30px;
   max-width: 900px;
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--ink);
 }
 .timeline-item {
   margin-bottom: 60px;
@@ -225,7 +225,7 @@ img {
   top: 4px;
   width: 16px;
   height: 16px;
-  background: var(--gold);
+  background: var(--ink);
   border-radius: 50%;
   box-shadow: 0 0 0 4px #000;
 }
