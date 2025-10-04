@@ -74,7 +74,7 @@ img {
 }
 .navlinks a:hover,
 .navlinks a.active {
-  color:var(--link-hover);
+  color:var(--ink);
 }
 
 /* ────────────────────────────────
