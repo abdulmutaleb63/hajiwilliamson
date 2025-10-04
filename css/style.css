@@ -221,13 +221,13 @@ img {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -11px;
-  top: 4px;
-  width: 16px;
-  height: 16px;
+  left: -25px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
   background: var(--ink);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #000;
+  box-shadow: 0 0 0 3px #000;
 }
 .timeline-item h3 {
   font-family: 'Playfair Display', serif;
