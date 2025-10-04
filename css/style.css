@@ -154,8 +154,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../images/haji.jpg') center/contain no-repeat fixed;
-  background-color: #000;
+  background: url('../images/haji.jpg') 50% 20% / cover no-repeat fixed;
   color: #fff;
   text-align: center;
 }
