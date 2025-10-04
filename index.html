@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Legacy of Haji Williamson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Hero section */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('images/hero.jpg') center/cover no-repeat fixed;
+      color: #fff;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      animation: fadeInUp 1.5s ease;
+    }
+    .hero-content h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 58px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .hero-content p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+    .scroll-down {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      color: #fff;
+      opacity: 0.7;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -8px); }
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      margin: 100px auto;
+      padding-left: 30px;
+      max-width: 900px;
+      border-left: 3px solid var(--gold);
+    }
+    .timeline-item {
+      margin-bottom: 60px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px #fdfaf5;
+    }
+    .timeline-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .timeline-item p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .timeline-item img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Quote Section */
+    .quote-section {
+      text-align: center;
+      background: var(--gold);
+      color: #fff;
+      padding: 60px 20px;
+      font-size: 22px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(20px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container inner">
+      <div class="brand"><a href="index.html">Haji Williamson</a></div>
+      <div class="navlinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="biography.html">Biography</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="ar/index.html" lang="ar" dir="rtl">العربية</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>The Legacy of Haji Williamson</h1>
+      <p>From Bristol’s docks to Arabia’s deserts — a life that bridged faith, trade, and transformation.</p>
+    </div>
+    <div class="scroll-down">Scroll to explore ↓</div>
+  </header>
+
+  <!-- Intro -->
+  <section class="container section" data-aos="fade-up">
+    <h2>About the Journey</h2>
+    <p class="lead">William Richard Williamson — later known as Abdullah Fadhil Al-Maslamani — was among the earliest British converts to Islam and lived most of his life across the Arabian Peninsula. His story intertwines seafaring adventure, faith, and the early oil history of the Gulf.</p>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline" id="timeline">
+    <div class="timeline-item" data-aos="fade-up">
+      <h3>1872 — Birth in Bristol, England</h3>
+      <p>Born in Bristol, he left school at thirteen to work at sea, driven by curiosity for the world beyond England.</p>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+      <h3>1894 — Conversion to Islam</h3>
+      <p>After arriving in Aden, he immersed himself in Islamic studies and embraced Islam, taking the name <strong>Abdullah Fadhil</strong>. He later performed Hajj and became known as “Haji.”</p>
+      <img src="images/haji-portrait.jpg" alt="Haji Williamson portrait">
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+      <h3>1900s–1920s — Life in Arabia</h3>
+      <p>Settled between Kuwait, Basra, and Bahrain. Fluent in Arabic, he traded camels and horses, earning the respect of local tribes.</p>
+      <img src="images/haji-basra.jpg" alt="Basra old photo">
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+      <h3>1920s–1930s — Work with Anglo-Persian Oil Company</h3>
+      <p>Leveraging his deep knowledge of the Arab world, he served as a liaison between the British oil industry and Gulf sheikhs, helping shape early petroleum negotiations.</p>
+      <img src="images/haji-kuwait.jpg" alt="Kuwait 1930s">
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+      <h3>Later Years — Legacy</h3>
+      <p>Known as <em>“The English Arab”</em>, he remained in Arabia until his final years, remembered by family and historians as a bridge between two worlds.</p>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="quote-section" data-aos="fade-up">
+    “Between the sea and the sands, a life is written in journeys.”
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      Curated & designed by <strong>Abdul Mutaleb</strong> — A gift for the family.
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once:true, duration:700, easing:'ease-out-cubic' });</script>
+</body>
+</html>
