@@ -1,143 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Biography — Haji Williamson</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biography — Haji Williamson</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-<!-- jQuery + Turn.js -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
-
-<style>
-body {
-  background: radial-gradient(circle at top, #0a0a0a 0%, #000 100%);
-  color: var(--ink);
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
-}
-
-/* Book wrapper */
-.book-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px auto;
-}
-
-/* Flipbook container */
-#flipbook {
-  width: 1200px;   /* wide enough for 2 pages */
-  height: 600px;
-  background: linear-gradient(to right, #000 49%, #222 50%, #000 51%); /* spine */
-  box-shadow: 0 0 80px rgba(255, 215, 0, 0.2);
-  border: 2px solid var(--gold-dark);
-}
-
-/* Each page */
-.page {
-  background: #111 url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-  background-size: cover;
-  color: var(--ink);
-  padding: 40px;
-  font-family: 'Playfair Display', serif;
-  font-size: 17px;
-  line-height: 1.9;
-  text-align: justify;
-  border: 1px solid var(--gold-dark);
-  box-shadow: inset 15px 0 30px rgba(0,0,0,0.4), inset -15px 0 30px rgba(0,0,0,0.4);
-  overflow-y: auto;
-}
-
-/* Page glow on edge */
-.page::after {
-  content: "";
-  position: absolute;
-  top: 0; right: 0; bottom: 0;
-  width: 5%;
-  background: linear-gradient(to left, rgba(255,215,0,0.07), transparent);
-  pointer-events: none;
-}
-
-/* Controls */
-.controls {
-  text-align: center;
-  margin-top: 20px;
-}
-.controls button {
-  background: var(--gold);
-  border: none;
-  padding: 10px 26px;
-  margin: 0 10px;
-  font-weight: 600;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.controls button:hover {
-  background: var(--gold-dark);
-  transform: translateY(-2px);
-}
-
-/* Navbar */
-.navbar { background: rgba(0,0,0,0.85); border-bottom: 1px solid var(--gold); }
-</style>
+  <style>
+    body {
+      background: #000;
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .bio-container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #111;
+      border: 1px solid var(--gold-dark);
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(255, 215, 0, 0.15);
+    }
+    .bio-container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .bio-container p {
+      line-height: 1.8;
+      font-size: 18px;
+      color: #ddd;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="container inner">
-    <div class="brand"><a href="index.html">Haji Williamson</a></div>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="biography.html" class="active">Biography</a>
-      <a href="family.html">Family</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About</a>
-      <a href="ar/biography.html" lang="ar" dir="rtl">العربية</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container inner">
+      <div class="brand"><a href="index.html">Haji Williamson</a></div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="biography.html" class="active">Biography</a>
+        <a href="family.html">Family</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="ar/biography.html" lang="ar" dir="rtl">العربية</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- Biography Content -->
+  <div class="bio-container">
+    <h2>The Life of Haji Williamson</h2>
+
+    <p>⬇️ Paste your full biography text here. This container will format it beautifully for easy reading.</p>
+    <p>Each paragraph will automatically be spaced and justified, and the text will adapt for mobile as well.</p>
+    <p>If your biography is very long, you can keep pasting until complete — the page will scroll naturally.</p>
   </div>
-</nav>
-
-<!-- Flipbook -->
-<div class="book-wrapper">
-  <div id="flipbook">
-
-    <!-- Example Pages -->
-    <div class="page"><p>⬇️ Paste the first part of the biography text here...</p></div>
-    <div class="page"><p>⬇️ Paste the next section here...</p></div>
-    <div class="page"><p>⬇️ Continue with more text...</p></div>
-    <div class="page"><p>⬇️ Add as many pages as needed...</p></div>
-
-  </div>
-</div>
-
-<!-- Navigation buttons -->
-<div class="controls">
-  <button onclick="$('#flipbook').turn('previous')">← Previous</button>
-  <button onclick="$('#flipbook').turn('next')">Next →</button>
-</div>
-
-<script>
-$(document).ready(function(){
-  $("#flipbook").turn({
-    width: 1200,
-    height: 600,
-    autoCenter: true,
-    display: 'double',   // 🔥 two facing pages
-    elevation: 100,
-    duration: 1200,
-    gradients: true,
-    acceleration: true
-  });
-});
-</script>
 
 </body>
 </html>
