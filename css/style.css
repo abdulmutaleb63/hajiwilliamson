@@ -47,7 +47,9 @@ img {
   top:0;
   z-index:99;
   background:#000;
-  border-bottom:1px solid var(--ink);
+  border-bottom: 1px solid var(--gold);
+  box-shadow: 0 0 12px var(--gold), 0 0 24px rgba(212, 175, 55, 0.6);
+  transition: box-shadow 0.4s ease, border-bottom 0.4s ease;
 }
 .navbar .inner {
   display:flex;
