@@ -2,14 +2,14 @@
    Base Theme & Colors
 ──────────────────────────────── */
 :root {
-  --bg:#000;               /* black background */
-  --ink:#f5d76e;           /* soft gold headings */
-  --muted:#bbb;            /* lighter gray for body text */
-  --link:#d4af37;          /* golden links */
-  --link-hover:#ffea80;    /* glowing gold */
-  --gold:#d4af37;
-  --gold-dark:#b89628;
-  --panel:#111;            /* dark gray panels/cards */
+  --bg:#000;               
+  --ink:#C9A227;           /* deep luxe gold for main text */
+  --muted:#aaa;            
+  --link:#FFD700;          /* royal gold for links */
+  --link-hover:#FFE066;    /* glowing effect */
+  --gold:#FFD700;          
+  --gold-dark:#B8860B;     /* darker accent gold */
+  --panel:#111;            
 }
 
 /* ────────────────────────────────
