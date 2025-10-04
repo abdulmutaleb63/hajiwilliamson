@@ -150,11 +150,11 @@ img {
 ──────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../images/haji.jpg') 50% 60% / cover no-repeat fixed;
+  background: url('../images/haji.jpg') 50% 20% / cover no-repeat fixed;
   background-attachment: scroll;
   color: #fff;
   text-align: center;
