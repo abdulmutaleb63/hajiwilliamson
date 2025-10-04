@@ -154,7 +154,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('IMG_9174.JPG') center/cover no-repeat fixed;
+  background: url('../IMG_9174.JPG') center/cover no-repeat fixed;
   color: #fff;
   text-align: center;
 }
