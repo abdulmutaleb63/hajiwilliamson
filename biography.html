@@ -1,144 +1,167 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Biography — Haji Williamson</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biography — Haji Williamson</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-  <!-- jQuery + Turn.js -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+<!-- jQuery + Turn.js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
-  <style>
-    body { background:#000; color:var(--ink); }
-    .book-container {
-      width: 90%;
-      max-width: 900px;
-      margin: 40px auto;
-      box-shadow:0 0 25px rgba(0,0,0,0.8);
-    }
-    #flipbook { width: 100%; height: 600px; }
-    #flipbook .page {
-      background:#111;
-      color:var(--ink);
-      padding:30px;
-      font-family: 'Inter', sans-serif;
-      line-height:1.7;
-      border:1px solid var(--ink);
-      overflow-y:auto;
-    }
-    #flipbook .page h2 {
-      font-family:'Playfair Display', serif;
-      color:var(--gold);
-      margin-top:0;
-    }
-    /* Navigation buttons */
-    .controls { text-align:center; margin-top:15px; }
-    .controls button {
-      background:var(--gold);
-      color:#000;
-      border:none;
-      padding:10px 20px;
-      margin:0 10px;
-      font-weight:bold;
-      cursor:pointer;
-      border-radius:6px;
-    }
-    .controls button:hover { background:var(--gold-dark); }
-  </style>
+<style>
+body {
+  background: radial-gradient(circle at top, #0a0a0a 0%, #000 100%);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Book wrapper */
+.book-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin-top: 40px;
+}
+
+/* Flipbook itself */
+#flipbook {
+  width: 900px;
+  height: 600px;
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.15);
+  border: 1px solid var(--ink);
+  background: #111;
+}
+
+/* Each page */
+.page {
+  background: #111;
+  color: var(--ink);
+  padding: 50px;
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  line-height: 1.9;
+  text-align: justify;
+  position: relative;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.4);
+  overflow-y: auto;
+}
+
+/* Page glow effect */
+.page::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 5%;
+  background: linear-gradient(to left, rgba(255,215,0,0.07), transparent);
+  pointer-events: none;
+}
+
+/* Controls */
+.controls {
+  text-align: center;
+  margin-top: 30px;
+}
+.controls button {
+  background: var(--gold);
+  border: none;
+  padding: 10px 26px;
+  margin: 0 10px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.controls button:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+}
+
+/* Navbar adjustment */
+.navbar { background: rgba(0,0,0,0.85); border-bottom: 1px solid var(--gold); }
+</style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container inner">
-      <div class="brand"><a href="index.html">Haji Williamson</a></div>
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="biography.html" class="active">Biography</a>
-        <a href="family.html">Family</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="about.html">About</a>
-        <a href="ar/biography.html" lang="ar" dir="rtl">العربية</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Flipbook -->
-  <div class="book-container">
-    <div id="flipbook">
-
-      <div class="page">
-        <h2>Early Life</h2>
-        <p>Few areas in Britain have produced as many notable families in world history. The family name Williamson is one of those, believed to descend from the Strathclyde Britons — an ancient Gaelic/Celtic race. Among its many figures, one of the most notable was William Richard Williamson, later known as the Arabian adventurer.</p>
-        <p>Williamson was born in Bristol in 1872. Even as a boy, he showed a rebellious spirit and a hatred of injustice. While a pupil at Clifton School he repeatedly courted danger and punishment by climbing the famous Clifton suspension bridge.</p>
-      </div>
-
-      <div class="page">
-        <h2>To the Sea</h2>
-        <p>At thirteen, Williamson left school and joined a tea-clipper bound for Australia. Life at sea was brutal: flogging, climbing the mast in gales, and the harshness of shipboard discipline. But instead of breaking him, it fueled his love of adventure.</p>
-        <p>He deserted in California, working on a ranch south of Los Angeles. There he mastered cowboy skills — bronco-breaking, gun-slinging — yet refused to waste his earnings on vice. A strong belief in God began to grow within him.</p>
-      </div>
-
-      <div class="page">
-        <h2>Gold Trails & Hardships</h2>
-        <p>Fired by tales of gold, he and a companion set off to Nevada, only to be robbed of mule, money, and even their shoes. Undeterred, Williamson pressed on, taking odd jobs before returning to San Francisco. He became a sailor once more, voyaging around Cape Horn and later attempting to work on the Panama Canal.</p>
-        <p>Suffering malaria, bankruptcy, and harsh winters, Williamson survived by forming a traveling vaudeville troupe and even tried his hand at boxing, winning his first three bouts.</p>
-      </div>
-
-      <div class="page">
-        <h2>Adventures in the Pacific</h2>
-        <p>Williamson sailed on the Sitka Brave through the Bering Straits and later traded sea-cucumbers in the Caroline Islands. His fortunes turned when Spanish authorities arrested him, accusing him of gun-running, and he was imprisoned in Manila under appalling conditions.</p>
-        <p>He endured torture, forced labor, and near-death experiences before escaping to the US consulate. Disguised, he fled to Hong Kong and continued his life at sea.</p>
-      </div>
-
-      <div class="page">
-        <h2>Conversion to Islam</h2>
-        <p>In Bombay, Williamson’s spiritual yearning grew. Aboard the SS Siam, he discovered a book by Imam Abdullah Quilliam, Sheikh al-Islam of the British Isles. The clarity of Islam resonated deeply with him.</p>
-        <p>In Aden he formally embraced Islam, took the name Abdullah Fadhil, and later performed Hajj in 1894. His life’s direction was forever changed.</p>
-      </div>
-
-      <div class="page">
-        <h2>Life in Arabia</h2>
-        <p>Settling in Kuwait, Zubair, and Basra, he learned Arabic and traded camels and horses. He became respected among Gulf tribes and merchants, even amusing locals with European inventions like a phonograph and penny-farthing bicycle.</p>
-        <p>He lived as a Bedouin trader, balancing the life of an Englishman with that of an Arab Muslim.</p>
-      </div>
-
-      <div class="page">
-        <h2>Pearl Diving & Oil</h2>
-        <p>Haji Abdullah joined great pearling expeditions in the Gulf, commanding his dhow Fath al-Khayr. Though he never struck riches, his adventures brought him to Damascus for further Islamic study.</p>
-        <p>Later he worked with the Anglo-Persian Oil Company, guiding negotiations in Abu Dhabi and helping Imperial Airways chart routes across Arabia — shaping the future of the region.</p>
-      </div>
-
-      <div class="page">
-        <h2>Final Years</h2>
-        <p>Retiring to Basra, Haji raised children and grandchildren, sharing tales of his extraordinary life. He frequented the Ashar Mosque, studied religion, and indulged in penny Western novels.</p>
-        <p>He passed away in 1958, remembered as “The English Arab,” a man whose life bridged East and West, faith and trade, tradition and change.</p>
-      </div>
-
-    </div>
-
-    <!-- Controls -->
-    <div class="controls">
-      <button onclick="$('#flipbook').turn('previous')">← Previous</button>
-      <button onclick="$('#flipbook').turn('next')">Next →</button>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container inner">
+    <div class="brand"><a href="index.html">Haji Williamson</a></div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="biography.html" class="active">Biography</a>
+      <a href="family.html">Family</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
+      <a href="ar/biography.html" lang="ar" dir="rtl">العربية</a>
     </div>
   </div>
+</nav>
 
-  <script>
-    $(document).ready(function(){
-      $("#flipbook").turn({
-        width: 900,
-        height: 600,
-        autoCenter: true,
-        gradients: true,
-        elevation: 50
-      });
-    });
-  </script>
+<!-- Flipbook -->
+<div class="book-wrapper">
+  <div id="flipbook">
+
+    <!-- Page 1 -->
+    <div class="page">
+      <p>⬇️ Paste the first part of your biography here...</p>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page">
+      <p>⬇️ Paste next section here...</p>
+    </div>
+
+    <!-- Page 3 -->
+    <div class="page">
+      <p>⬇️ Continue here...</p>
+    </div>
+
+    <!-- Page 4 -->
+    <div class="page">
+      <p>⬇️ Continue here...</p>
+    </div>
+
+    <!-- Page 5 -->
+    <div class="page">
+      <p>⬇️ Continue here...</p>
+    </div>
+
+    <!-- Add or duplicate more pages as needed -->
+  </div>
+</div>
+
+<!-- Navigation buttons -->
+<div class="controls">
+  <button onclick="$('#flipbook').turn('previous')">← Previous</button>
+  <button onclick="$('#flipbook').turn('next')">Next →</button>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#flipbook").turn({
+    width: 900,
+    height: 600,
+    autoCenter: true,
+    elevation: 100,
+    duration: 1300,
+    gradients: true,
+    acceleration: true,
+    when: {
+      turned: function(e, page) {
+        console.log('Current page: ' + page);
+      }
+    }
+  });
+});
+</script>
+
 </body>
 </html>
