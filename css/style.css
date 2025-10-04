@@ -104,7 +104,7 @@ img {
   font-weight:600;
   transition:all .3s;
 }
-.cta:hover { background:var(--gold-dark); color:#fff; }
+.cta:hover { background:var(--ink); color:#fff; }
 
 /* ────────────────────────────────
    Cards
