@@ -332,7 +332,7 @@ img {
   margin: 80px auto;
   padding: 60px;
   background: var(--panel);
-  border: 1px solid var(--gold-dark);
+  border: 1px solid #0000000;
   border-radius: 12px;
   box-shadow: 0 0 50px rgba(255, 215, 0, 0.15);
   text-align: center;
