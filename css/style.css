@@ -355,9 +355,12 @@ img {
   justify-items: center;
 }
 
+
+/* Uniform Image Sizing for Gallery */
 .bio-gallery img {
   width: 100%;
-  max-width: 260px;
+  height: 280px;               /* fixed thumbnail height */
+  object-fit: cover;           /* crop without distortion */
   border-radius: 10px;
   border: 1px solid var(--gold-dark);
   box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
@@ -366,6 +369,7 @@ img {
   opacity: 0;
   transform: translateY(30px);
 }
+
 
 .bio-gallery img.visible {
   opacity: 1;
