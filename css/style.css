@@ -293,14 +293,32 @@ img {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Quote banner */
 .quote-section {
-  text-align: center;
-  background: var(--ink);
+  position: relative;
+  overflow: hidden;
   color: #000;
-  padding: 60px 20px;
+  text-align: center;
+  padding: 80px 20px;
   font-size: 22px;
   font-family: 'Cormorant Garamond', serif;
+  background: linear-gradient(180deg, #c9a55d, #b88c3a);
+}
+
+.quote-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://www.transparenttextures.com/patterns/sandpaper.png');
+  opacity: 0.4;
+  animation: sandMove 12s infinite linear;
+}
+
+@keyframes sandMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* ────────────────────────────────
